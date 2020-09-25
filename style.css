@@ -405,7 +405,3 @@ body > footer {
 body > footer h2 {
   margin-bottom: 1rem;
 }
-
-#footer-space {
-  flex: 1;
-}
