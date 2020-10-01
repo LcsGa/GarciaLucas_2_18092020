@@ -1,0 +1,87 @@
+/* general */
+
+:root {
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+#container > header,
+#research-and-filter,
+#activities,
+#container > footer {
+  display: none;
+}
+
+/* header */
+
+header nav ul {
+  width: 100vw;
+}
+
+header nav li {
+  margin: 0;
+}
+
+#register {
+  order: -1;
+}
+
+/* accomodations */
+
+#accomodations {
+  padding: 0;
+  flex-direction: column-reverse;
+}
+
+#accomodations > :nth-child(1n) {
+  flex: auto;
+  border-radius: 0;
+  margin: 0;
+  /* padding: 0; */
+}
+
+#accomodations article {
+  background: #fff;
+}
+
+#accomodation-list {
+  margin: 0;
+  /* width: 100%; */
+}
+
+#accomodation-list a {
+  width: 100vw;
+  /* display: flex;
+  justify-content: center; */
+  /* padding: 0.4rem 0; */
+}
+
+#accomodation-list figure {
+  margin: 0;
+  height: 210px;
+  width: 90vw;
+}
+
+/* activities */
+
+#activities-list {
+  margin: 0;
+  /* align-items: center; => Doesn't work */
+}
+
+#activities-list figure {
+  width: 9vw;
+  margin: 1.5rem 0;
+}
+
+#activities-list .image-1,
+#activities-list .image-4,
+#activities-list .image-2,
+#activities-list .image-3,
+#activities-list .image-5,
+#activities-list .image-6 {
+  height: 200px;
+}
+
+#container > footer {
+  flex-direction: column;
+}
