@@ -4,25 +4,119 @@
   --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-#container > header,
-#research-and-filter,
-#activities,
-#container > footer {
-  display: none;
-}
-
 /* header */
 
-header nav ul {
-  width: 100vw;
+#container > header {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: auto;
 }
 
-header nav li {
-  margin: 0;
+#logo {
+  height: 12vh;
+  margin-left: 1.5rem;
+  flex-grow: 0;
+  display: flex;
+  align-items: center;
 }
 
 #register {
-  order: -1;
+  order: 0;
+  margin-right: 1.5rem;
+}
+
+#container > header nav {
+  height: auto;
+  align-self: flex-end;
+}
+
+#container > header ul {
+  width: 100vw;
+}
+
+#container > header li {
+  flex: 1;
+  justify-content: center;
+  margin: 0;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid var(--light-gray);
+}
+
+#selected {
+  border-top: none;
+  border-bottom: 3px solid var(--dark-blue) !important;
+}
+
+/* research-and-filter section */
+
+#research-and-filter {
+  width: 100vw;
+  margin-top: 2rem;
+  padding: 0 1.5rem;
+}
+
+#search-bar {
+  margin: 2rem -1.2rem 2rem 0; /* Padding-right To fit with the transform: translateX(-0.5rem) over the search-icon */
+}
+
+#search-bar i,
+.filter,
+.filter i {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+#search-bar i,
+#search-bar input,
+.filter i {
+  font-size: 1.2rem;
+}
+
+#search-bar > i {
+  border-radius: 1.2rem 0 0 1.2rem;
+}
+
+#search-bar input {
+  max-width: calc(
+    100vw - 3rem - 7rem + 1.2rem
+  ); /* screen-width - (2*section-padding) - (2*icon/button width) + (button's translateX compensation) */
+  padding-right: 2.2rem; /*1 + 0.7 To fit with the translation of the search-button*/
+}
+
+#search-bar button:first-of-type {
+  display: none;
+}
+
+#search-icon {
+  transform: translateX(
+    -1.2rem
+  ); /* In order to have the top and bottom borders of the input over the radius of the search-button */
+  border-radius: 1.2rem;
+}
+
+#search-icon i {
+  display: flex;
+}
+
+#filters ul {
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+.filter {
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.filter p {
+  padding-left: calc(
+    3.5rem + 0.7rem
+  ); /* Like on desktop mode, 0.7rem is the most aesthetic */
+}
+
+#info-msg i {
+  flex-shrink: 0;
 }
 
 /* accomodations */
@@ -32,11 +126,29 @@ header nav li {
   flex-direction: column-reverse;
 }
 
-#accomodations > :nth-child(1n) {
+#accomodations > :nth-child(1n) /* Every direct children : Aside and article */ {
   flex: auto;
   border-radius: 0;
   margin: 0;
-  /* padding: 0; */
+  padding: 2rem 1.5rem;
+}
+
+#accomodations figure {
+  border-width: 5px;
+}
+
+#popularity-list {
+  margin: 1rem 0 -0.5rem;
+}
+
+#popularity-list figure,
+#accomodation-list a {
+  margin: 0.4rem 0;
+}
+
+#popularity-list .image {
+  height: 130px;
+  width: 130px;
 }
 
 #accomodations article {
@@ -45,32 +157,35 @@ header nav li {
 
 #accomodation-list {
   margin: 0;
-  /* width: 100%; */
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 1rem 0 1.5rem;
 }
 
 #accomodation-list a {
-  width: 100vw;
-  /* display: flex;
-  justify-content: center; */
-  /* padding: 0.4rem 0; */
+  width: 100%;
+  display: flex;
 }
 
 #accomodation-list figure {
   margin: 0;
   height: 210px;
-  width: 90vw;
+  width: 100%;
 }
 
 /* activities */
 
+#activities {
+  padding: 1.5rem;
+}
+
 #activities-list {
   margin: 0;
-  /* align-items: center; => Doesn't work */
 }
 
 #activities-list figure {
-  width: 9vw;
-  margin: 1.5rem 0;
+  width: 100%;
+  margin: 0.8rem 0;
 }
 
 #activities-list .image-1,
@@ -79,9 +194,15 @@ header nav li {
 #activities-list .image-3,
 #activities-list .image-5,
 #activities-list .image-6 {
-  height: 200px;
+  height: 130px;
 }
+
+/* Footer */
 
 #container > footer {
   flex-direction: column;
+}
+
+#container > footer nav:nth-child(2) {
+  padding: 3rem 0;
 }
