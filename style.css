@@ -314,7 +314,7 @@ aside {
 
 #accomodations figcaption {
   flex: 2;
-  margin-left: 1rem;
+  margin: 0 1rem;
 }
 
 #accomodation-list {
@@ -322,9 +322,14 @@ aside {
   flex-wrap: wrap;
 }
 
+#accomodation-list a {
+  width: 33%;
+  /* min-width: 200px; */
+}
+
 #accomodation-list figure {
   height: 250px;
-  width: 300px;
+  width: calc(100% - 2rem);
   margin: 1rem;
 }
 
