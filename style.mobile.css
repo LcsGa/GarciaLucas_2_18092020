@@ -176,11 +176,11 @@
 /* activities */
 
 #activities {
-  padding: 1.5rem;
+  padding: 0 1.5rem;
 }
 
 #activities-list {
-  margin: 0;
+  margin: 1rem 0 0;
 }
 
 #activities-list figure {
