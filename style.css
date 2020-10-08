@@ -274,7 +274,8 @@ header nav li,
 #accomodation-list,
 aside, /* for adding flex-grow on #popularity-list */
 aside header,
-#popularity-list {
+#popularity-list,
+.evaluation {
   display: flex;
 }
 
@@ -286,8 +287,8 @@ aside,
 }
 
 #accomodation-list,
-aside header,
-#popularity-list {
+#popularity-list,
+aside header {
   justify-content: space-between;
 }
 
@@ -329,7 +330,7 @@ aside {
 
 #accomodation-list figure {
   height: 250px;
-  width: calc(100% - 2rem);
+  width: calc(100% - 2rem); /* 100 % - 2*margin */
   margin: 1rem;
 }
 
@@ -338,8 +339,7 @@ aside {
   width: 100%;
 }
 
-#accomodation-list figcaption,
-aside figcaption {
+#accomodation-list figcaption {
   justify-content: space-evenly;
 }
 
@@ -381,13 +381,28 @@ aside header i {
   flex-grow: 1;
 }
 
-#popularity-list figure {
-  min-width: 300px;
-}
-
 #popularity-list .image {
   height: 170px;
   width: 170px;
+}
+
+#popularity-list figcaption {
+  margin-top: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+#popularity-list p {
+  margin-top: 0.5rem;
+}
+
+#popularity-list h3,
+#popularity-list p {
+  flex-grow: 0;
+}
+
+#popularity-list .evaluation {
+  flex-grow: 1;
+  align-items: flex-end;
 }
 
 #accomodations aside .image-1 {
