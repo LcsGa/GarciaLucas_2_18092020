@@ -223,6 +223,11 @@ figcaption,
 
 #container > footer {
   flex-direction: column;
+  padding-top: 3rem;
+}
+
+#container > footer nav {
+  margin: 0;
 }
 
 #container > footer nav:nth-child(2) {
