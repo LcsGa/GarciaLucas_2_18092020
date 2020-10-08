@@ -46,6 +46,12 @@
   height: 8vh;
 }
 
+@media (max-height: 600px) {
+  #container > header {
+    height: 20vh;
+  }
+}
+
 #logo {
   margin-left: 2rem;
 }
