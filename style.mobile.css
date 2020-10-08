@@ -51,8 +51,6 @@
 
 #research-and-filter {
   width: 100vw;
-  margin-top: 2rem;
-  padding: 0 1.5rem;
 }
 
 #search-bar {
@@ -121,35 +119,58 @@
 
 /* accomodations */
 
-#accomodations {
-  padding: 0;
-  flex-direction: column-reverse;
-}
-
 #accomodations > :nth-child(1n) /* Every direct children : Aside and article */ {
-  flex: auto;
-  border-radius: 0;
-  margin: 0;
   padding: 2rem 1.5rem;
 }
 
-#accomodations figure {
-  border-width: 5px;
-}
-
 #popularity-list {
+  flex-direction: column;
   margin: 1rem 0 -0.5rem;
 }
 
-#popularity-list figure,
-#accomodation-list a {
+#popularity-list a {
+  width: 100%;
+}
+
+figcaption,
+.fa-star {
+  font-size: 0.8rem;
+}
+
+#popularity-list figure {
+  height: auto;
+  flex-direction: row;
   margin: 0.4rem 0;
+}
+
+#popularity-list figure .image {
+  flex: none;
 }
 
 #popularity-list .image {
   height: 130px;
   width: 130px;
 }
+
+/* Copie conforme de la version bureau !! _______________*/
+#popularity-list figcaption {
+  margin-top: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+#popularity-list p {
+  margin-top: 0.5rem;
+}
+
+#popularity-list h3,
+#popularity-list p {
+  flex-grow: 0;
+}
+
+#popularity-list .evaluation {
+  flex-grow: 1;
+  align-items: flex-end;
+} /* ____________________________________________________*/
 
 #accomodations article {
   background: #fff;
@@ -163,6 +184,7 @@
 }
 
 #accomodation-list a {
+  margin: 0.4rem 0;
   width: 100%;
   display: flex;
 }
