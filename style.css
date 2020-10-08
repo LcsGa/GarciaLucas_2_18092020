@@ -188,7 +188,7 @@ header nav li,
   margin: 0.5rem 0;
 }
 
-#search-bar > i {
+#search-bar i:first-of-type {
   background: var(--light-gray);
   color: #000;
   border-radius: 0.7rem 0 0 0.7rem;
