@@ -61,9 +61,16 @@ figure {
 }
 
 .image {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .evaluation-empty-star {
@@ -341,35 +348,10 @@ aside {
 
 #accomodation-list .image {
   flex: 3;
-  width: 100%;
 }
 
 #accomodation-list figcaption {
   justify-content: space-evenly;
-}
-
-#accomodations .image-1 {
-  background-image: url("../images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
-}
-
-#accomodations .image-2 {
-  background-image: url("../images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg");
-}
-
-#accomodations .image-3 {
-  background-image: url("../images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg");
-}
-
-#accomodations .image-4 {
-  background-image: url("../images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
-}
-
-#accomodations .image-5 {
-  background-image: url("../images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
-}
-
-#accomodations .image-6 {
-  background-image: url("../images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
 }
 
 aside header {
@@ -410,16 +392,6 @@ aside header i {
   align-items: flex-end;
 }
 
-#accomodations aside .image-1 {
-  background-image: url("../images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
-}
-#accomodations aside .image-2 {
-  background-image: url("../images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
-}
-#accomodations aside .image-3 {
-  background-image: url("../images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
-}
-
 /* Activities : refactorization done inside this section */
 
 #activities-list,
@@ -444,29 +416,23 @@ aside header i {
   flex-direction: column;
 }
 
-#activities-list .image-1 {
+#activities-list img[alt="Vieux Port"] {
   height: 500px;
-  background-image: url("../images/activites/1_xlarge/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg");
 }
-#activities-list .image-2 {
+#activities-list img[alt="Fort de Pomègues"] {
   height: 300px;
-  background-image: url("../images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg");
 }
-#activities-list .image-3 {
+#activities-list img[alt="Îles du Frioul"] {
   height: 100px;
-  background-image: url("../images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");
 }
-#activities-list .image-4 {
+#activities-list img[alt="Parc National des Calanques"] {
   height: 500px;
-  background-image: url("../images/activites/1_xlarge/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg");
 }
-#activities-list .image-5 {
+#activities-list img[alt="Notre-Dame-de-la-Garde"] {
   height: 250px;
-  background-image: url("../images/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg");
 }
-#activities-list .image-6 {
+#activities-list img[alt="Parc Longchamp"] {
   height: 150px;
-  background-image: url("../images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg");
 }
 
 #activities-list figcaption {
@@ -492,4 +458,3 @@ aside header i {
 #container > footer h2 {
   margin-bottom: 1rem;
 }
-
